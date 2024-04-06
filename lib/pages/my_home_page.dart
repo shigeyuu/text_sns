@@ -21,13 +21,13 @@ class MyHomePage extends StatelessWidget {
                 .get();
             final firsUserJson = firstUserDocument.data();
             if (firsUserJson == null) {
-              print("データが見つかりませんでした。");
+              debugPrint("データが見つかりませんでした。");
             } else {
               final publicUser = PublicUser.fromJson(firsUserJson);
-              print("ユーザーのID: ${publicUser.uid}");
+              debugPrint("ユーザーのID: ${publicUser.uid}");
             }
           } catch (e) {
-            print("アクセスが拒否されました。");
+            debugPrint("アクセスが拒否されました。");
           }
         },
       ),
