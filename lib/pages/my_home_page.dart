@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:text_sns/models/public_user.dart';
+import 'package:text_sns/models/public_user/public_user.dart';
+
 import '../flavors.dart';
 
 class MyHomePage extends StatelessWidget {
