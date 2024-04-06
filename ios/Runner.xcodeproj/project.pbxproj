@@ -674,6 +674,90 @@
 			};
 			name = "Release-dev";
 		};
+		911ED1C42BC0D6760011AF2E /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Debug-dev";
+		};
+		911ED1C52BC0D6760011AF2E /* Profile-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Profile-dev";
+		};
+		911ED1C62BC0D6760011AF2E /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Release-dev";
+		};
+		911ED1C72BC0D6760011AF2E /* Debug-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Debug-prod";
+		};
+		911ED1C82BC0D6760011AF2E /* Profile-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Profile-prod";
+		};
+		911ED1C92BC0D6760011AF2E /* Release-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Runner;
+			};
+			name = "Release-prod";
+		};
+		911ED1CA2BC0D6760011AF2E /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-dev";
+		};
+		911ED1CB2BC0D6760011AF2E /* Profile-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-dev";
+		};
+		911ED1CC2BC0D6760011AF2E /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-dev";
+		};
+		911ED1CD2BC0D6760011AF2E /* Debug-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-prod";
+		};
+		911ED1CE2BC0D6760011AF2E /* Profile-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-prod";
+		};
+		911ED1CF2BC0D6760011AF2E /* Release-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-prod";
+		};
 		97C147031CF9000F007C117D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1052,6 +1136,12 @@
 				331C8088294A63A400263BE5 /* Debug */,
 				331C8089294A63A400263BE5 /* Release */,
 				331C808A294A63A400263BE5 /* Profile */,
+				911ED1CA2BC0D6760011AF2E /* Debug-dev */,
+				911ED1CB2BC0D6760011AF2E /* Profile-dev */,
+				911ED1CC2BC0D6760011AF2E /* Release-dev */,
+				911ED1CD2BC0D6760011AF2E /* Debug-prod */,
+				911ED1CE2BC0D6760011AF2E /* Profile-prod */,
+				911ED1CF2BC0D6760011AF2E /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1078,6 +1168,12 @@
 				97C147061CF9000F007C117D /* Debug */,
 				97C147071CF9000F007C117D /* Release */,
 				249021D4217E4FDB00AE95B9 /* Profile */,
+				911ED1C42BC0D6760011AF2E /* Debug-dev */,
+				911ED1C52BC0D6760011AF2E /* Profile-dev */,
+				911ED1C62BC0D6760011AF2E /* Release-dev */,
+				911ED1C72BC0D6760011AF2E /* Debug-prod */,
+				911ED1C82BC0D6760011AF2E /* Profile-prod */,
+				911ED1C92BC0D6760011AF2E /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
