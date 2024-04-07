@@ -1,3 +1,3 @@
-import 'package:text_sns/models/public_user/result/result.dart';
+import 'package:text_sns/models/result/result.dart';
 
 typedef FutureResult<T> = Future<Result<T>>;
