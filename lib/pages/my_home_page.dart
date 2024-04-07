@@ -17,9 +17,12 @@ class MyHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           onPressed: controller.onFloatingActionButtonPressed),
       body: Center(
-        child: Text(
-          'Hello ${F.title}',
-        ),
+        child: Obx(() {
+          return Text(
+            'ユーザーのID ${controller.rxDoc.value?.id ?? "定められていません"}',
+            style: const TextStyle(fontSize: 40.0),
+          );
+        }),
       ),
     );
   }
