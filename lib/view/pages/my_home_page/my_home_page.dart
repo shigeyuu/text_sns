@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/controllers/my_home_page_controller.dart';
+import 'package:text_sns/view/pages/components/auth_screen/auth_screen.dart';
 
-import '../flavors.dart';
+import '../../../flavors.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -18,10 +19,10 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Obx(() {
         const style = TextStyle(fontSize: 60.0);
-        if (authController.rxAuthUser.value != null) {
-          return const Text("Nullではありません。", style: style);
+        if (authController.rxAuthUser.value == null) {
+          return const AuthScreen();
         } else {
-          return const Text("Nullです。", style: style);
+          return const Text("MainPage", style: style);
         }
       }),
     );
