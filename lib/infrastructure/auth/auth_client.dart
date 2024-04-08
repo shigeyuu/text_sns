@@ -19,4 +19,8 @@ class AuthClient {
     );
     return credential;
   }
+
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
 }
