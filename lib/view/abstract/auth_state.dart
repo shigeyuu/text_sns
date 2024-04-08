@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:text_sns/constant/auth_constant.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/view/common/rounded_button.dart';
 import 'package:text_sns/view/common/text_field_container.dart';
@@ -39,9 +40,11 @@ abstract class AuthState<T extends StatefulWidget> extends State<T> {
     final controller = AuthController.to;
     return TextFieldContainer(
       child: TextFormField(
-        decoration: const InputDecoration(hintText: "メールアドレス"),
+        decoration: const InputDecoration(hintText: AuthConstant.emailHintText),
         validator: (value) {
-          return GetUtils.isEmail(value!) ? null : "メールアドレスの形式が正しくありません";
+          return GetUtils.isEmail(value!)
+              ? null
+              : AuthConstant.emailValidatorMsg;
         },
         onSaved: controller.setEmail,
       ),
@@ -53,11 +56,12 @@ abstract class AuthState<T extends StatefulWidget> extends State<T> {
     return TextFieldContainer(
       child: TextFormField(
         obscureText: true,
-        decoration: const InputDecoration(hintText: "パスワード"),
+        decoration:
+            const InputDecoration(hintText: AuthConstant.passwordHintText),
         validator: (value) {
           return GetUtils.isLengthGreaterOrEqual(value!, 8)
               ? null
-              : "パスワードは8文字以上で入力してください";
+              : AuthConstant.passwordValidatorMsg;
         },
         onSaved: AuthController.to.setPassword,
       ),
@@ -77,7 +81,7 @@ abstract class AuthState<T extends StatefulWidget> extends State<T> {
         }
         AuthController.to.onPositiveButtonPressed();
       },
-      textValue: "送信",
+      textValue: AuthConstant.positiveButtonText,
     );
   }
 }

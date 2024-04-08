@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:text_sns/constant/auth_constant.dart';
 import 'package:text_sns/view/abstract/auth_state.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 
@@ -12,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends AuthState<LoginScreen> {
   @override
   Widget titleWidget() {
-    return const Text("ログイン画面",
+    return const Text(AuthConstant.loginTitle,
         style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold));
   }
 
@@ -23,7 +24,7 @@ class _LoginScreenState extends AuthState<LoginScreen> {
       onPressed: () {
         AuthController.to.onToggleIsLoginModeButtonPressed();
       },
-      child: const Text("新規登録画面へ", style: style),
+      child: const Text(AuthConstant.toLoginScreenText, style: style),
     );
   }
 }
