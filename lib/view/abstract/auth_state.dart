@@ -68,7 +68,7 @@ abstract class AuthState<T extends StatefulWidget> extends State<T> {
           // フォームフィールドの情報を変数に保存する
           _formKey.currentState!.save();
         }
-        AuthController.to.onPositiveButtonPressed;
+        AuthController.to.onPositiveButtonPressed();
       },
       child: const Text("送信"),
     );
