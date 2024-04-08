@@ -76,12 +76,13 @@ class _SignupScreenState extends State<SignupScreen> {
 
   Widget _positiveButton() {
     return ElevatedButton(
-      onPressed: () {
+      onPressed: () async {
         // バリデーションを行う
         if (_formKey.currentState!.validate()) {
           // フォームフィールドの情報を変数に保存する
           _formKey.currentState!.save();
         }
+        AuthController.to.onPositiveButtonPressed();
       },
       child: const Text("送信"),
     );
