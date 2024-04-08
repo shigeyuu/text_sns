@@ -9,6 +9,8 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   late double? _deviceHeight;
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -19,6 +21,7 @@ class _SignupScreenState extends State<SignupScreen> {
         children: [
           _titleWidget(),
           _signupForm(),
+          _positiveButton(),
         ],
       ),
     );
@@ -35,18 +38,27 @@ class _SignupScreenState extends State<SignupScreen> {
     return SizedBox(
       height: _deviceHeight! * 0.30,
       child: Form(
+          key: _formKey,
           child: Column(children: [
-        _emailTextField(),
-        _passwordTextField(),
-      ])),
+            _emailTextField(),
+            _passwordTextField(),
+          ])),
     );
   }
 
   //email入力をする関数
   Widget _emailTextField() {
     return TextFormField(
-      decoration: const InputDecoration(hintText: "メールアドレス"),
-    );
+        decoration: const InputDecoration(hintText: "メールアドレス"),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return "メールアドレスを入力してください";
+          }
+          return null;
+        },
+        onSaved: (value) {
+          // emailを保存する処理
+        });
   }
 
   //password入力をする関数
@@ -54,6 +66,25 @@ class _SignupScreenState extends State<SignupScreen> {
     return TextFormField(
       obscureText: true,
       decoration: const InputDecoration(hintText: "パスワード"),
+      validator: (value) {
+        if (value!.isEmpty) {
+          return "パスワードを入力してください";
+        }
+        return null;
+      },
+    );
+  }
+
+  Widget _positiveButton() {
+    return ElevatedButton(
+      onPressed: () {
+        // バリデーションを行う
+        if (_formKey.currentState!.validate()) {
+          // フォームフィールドの情報を変数に保存する
+          _formKey.currentState!.save();
+        }
+      },
+      child: const Text("送信"),
     );
   }
 }
