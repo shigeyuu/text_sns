@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:text_sns/controllers/verify_email.controller.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text("メールアドレスの確認をしてください",
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold)));
+    Get.put(VerifyEmailController());
+    const style = TextStyle(fontSize: 60.0);
+    return const Center(child: Text("メールアドレスの確認をしてください", style: style));
   }
 }

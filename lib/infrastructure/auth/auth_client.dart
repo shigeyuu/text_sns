@@ -23,4 +23,8 @@ class AuthClient {
   Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
   }
+
+  Future<void> sendEmailVerification(User user) async {
+    await user.sendEmailVerification();
+  }
 }
