@@ -8,7 +8,7 @@ import 'package:text_sns/ui_core/ui_helper.dart';
 class AuthController extends GetxController {
   static AuthController get to => Get.find<AuthController>();
   final rxAuthUser = Rx<User?>(FirebaseAuth.instance.currentUser);
-  final rxIsLoginMode = true.obs;
+  final rxIsLoginMode = false.obs;
   String email = "";
   String password = "";
   void setEmail(String? value) {

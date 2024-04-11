@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:text_sns/infrastructure/auth/auth_client.dart';
 import 'package:text_sns/models/result/result.dart';
@@ -13,7 +12,6 @@ class AuthRepository {
       final user = res.user;
       return (user == null) ? const Result.failure() : Result.success(user);
     } catch (e) {
-      debugPrint(e.toString());
       return const Result.failure();
     }
   }
@@ -26,7 +24,6 @@ class AuthRepository {
       final user = res.user;
       return (user == null) ? const Result.failure() : Result.success(user);
     } catch (e) {
-      debugPrint(e.toString());
       return const Result.failure();
     }
   }

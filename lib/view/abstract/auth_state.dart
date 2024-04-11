@@ -72,7 +72,7 @@ abstract class AuthState<T extends StatefulWidget> extends State<T> {
   Widget _positiveButton() {
     return RoundedButton(
       color: Colors.orange,
-      onPressed: () async {
+      onPressed: () {
         // バリデーションを行う
         if (_formKey.currentState!.validate()) {
           // フォームフィールドの情報を変数に保存する

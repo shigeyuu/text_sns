@@ -19,6 +19,7 @@ class MyHomePageController extends GetxController {
     final ref = DocRefCore.publicUserDocRef(user.uid);
     final data = user.toJson();
     final result = await repository.createDoc(ref, data);
+
     result.when(success: (_) async {
       await _readDoc(ref);
     }, failure: () {

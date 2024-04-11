@@ -24,7 +24,7 @@ class _LoginScreenState extends AuthState<LoginScreen> {
       onPressed: () {
         AuthController.to.onToggleIsLoginModeButtonPressed();
       },
-      child: const Text(AuthConstant.toLoginScreenText, style: style),
+      child: const Text(AuthConstant.toSignupScreenText, style: style),
     );
   }
 }

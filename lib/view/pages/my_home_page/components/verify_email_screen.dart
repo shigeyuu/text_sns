@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:text_sns/constant/verify_email.dart';
-import 'package:text_sns/controllers/verify_email.controller.dart';
+import 'package:text_sns/controllers/verify_email_controller.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen({super.key});
