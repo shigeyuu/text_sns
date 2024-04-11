@@ -20,6 +20,7 @@ class _EditScreenState extends State<EditScreen> {
       _titleWidget(),
       _formWidget(),
       _positiveButton(),
+      image(),
     ]);
   }
 
@@ -67,5 +68,12 @@ class _EditScreenState extends State<EditScreen> {
           }
         },
         textValue: EditConstant.positiveButtonText);
+  }
+
+  //画像を選択するアイコン
+  Widget image() {
+    return InkWell(
+        onTap: EditController.to.onImageIconTapped,
+        child: const Icon(Icons.image, size: 60.0));
   }
 }
