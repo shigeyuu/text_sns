@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:minio_new/minio.dart';
-import 'package:text_sns/core/firestore/aws_s3/aws_s3_core.dart';
+import 'package:text_sns/core/aws_s3/aws_s3_core.dart';
 
 class AWSS3Client {
   Future<MinioByteStream> getObject(String bucket, String object) async {

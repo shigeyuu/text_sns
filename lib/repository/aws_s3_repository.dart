@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:text_sns/infrastructure/aws_s3/aws_s3_client.dart';
 import 'package:text_sns/models/result/result.dart';
 import 'package:text_sns/typedefs/result_typedef.dart';
