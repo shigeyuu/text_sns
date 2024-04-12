@@ -5,4 +5,6 @@ class EditConstant {
   static const positiveButtonText = "更新する";
   static const successMsg = "ユーザーの更新が成功しました";
   static const failureMsg = "ユーザーの更新が失敗しました";
+
+  static const uploadImageFailureMsg = "画像のアップロードが失敗しました";
 }
