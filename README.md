@@ -19,3 +19,7 @@ flutter analyze .
 ## 自動生成
 
 flutter pub run build_runner build --delete-conflicting-outputs
+
+## Cloud Functions
+
+firebase deploy --only functions

@@ -9,11 +9,11 @@ part of 'moderated_image.dart';
 _$ModeratedImageImpl _$$ModeratedImageImplFromJson(Map<String, dynamic> json) =>
     _$ModeratedImageImpl(
       bucketName: json['bucketName'] as String,
-      modarationLabels: (json['modarationLabels'] as List<dynamic>?)
+      moderationLabels: (json['moderationLabels'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
           const [],
-      modarationModelVersion: json['modarationModelVersion'] as String? ?? '',
+      moderationModelVersion: json['moderationModelVersion'] as String? ?? '',
       fileName: json['fileName'] ?? "",
     );
 
@@ -21,7 +21,7 @@ Map<String, dynamic> _$$ModeratedImageImplToJson(
         _$ModeratedImageImpl instance) =>
     <String, dynamic>{
       'bucketName': instance.bucketName,
-      'modarationLabels': instance.modarationLabels,
-      'modarationModelVersion': instance.modarationModelVersion,
+      'moderationLabels': instance.moderationLabels,
+      'moderationModelVersion': instance.moderationModelVersion,
       'fileName': instance.fileName,
     };

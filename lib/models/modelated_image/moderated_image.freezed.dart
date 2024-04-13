@@ -21,9 +21,9 @@ ModeratedImage _$ModeratedImageFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModeratedImage {
   String get bucketName => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get modarationLabels =>
+  List<Map<String, dynamic>> get moderationLabels =>
       throw _privateConstructorUsedError; //不適切な理由を列挙
-  String get modarationModelVersion =>
+  String get moderationModelVersion =>
       throw _privateConstructorUsedError; // 検証を行ったモデルの名前
   dynamic get fileName => throw _privateConstructorUsedError;
 
@@ -41,8 +41,8 @@ abstract class $ModeratedImageCopyWith<$Res> {
   @useResult
   $Res call(
       {String bucketName,
-      List<Map<String, dynamic>> modarationLabels,
-      String modarationModelVersion,
+      List<Map<String, dynamic>> moderationLabels,
+      String moderationModelVersion,
       dynamic fileName});
 }
 
@@ -60,8 +60,8 @@ class _$ModeratedImageCopyWithImpl<$Res, $Val extends ModeratedImage>
   @override
   $Res call({
     Object? bucketName = null,
-    Object? modarationLabels = null,
-    Object? modarationModelVersion = null,
+    Object? moderationLabels = null,
+    Object? moderationModelVersion = null,
     Object? fileName = freezed,
   }) {
     return _then(_value.copyWith(
@@ -69,13 +69,13 @@ class _$ModeratedImageCopyWithImpl<$Res, $Val extends ModeratedImage>
           ? _value.bucketName
           : bucketName // ignore: cast_nullable_to_non_nullable
               as String,
-      modarationLabels: null == modarationLabels
-          ? _value.modarationLabels
-          : modarationLabels // ignore: cast_nullable_to_non_nullable
+      moderationLabels: null == moderationLabels
+          ? _value.moderationLabels
+          : moderationLabels // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
-      modarationModelVersion: null == modarationModelVersion
-          ? _value.modarationModelVersion
-          : modarationModelVersion // ignore: cast_nullable_to_non_nullable
+      moderationModelVersion: null == moderationModelVersion
+          ? _value.moderationModelVersion
+          : moderationModelVersion // ignore: cast_nullable_to_non_nullable
               as String,
       fileName: freezed == fileName
           ? _value.fileName
@@ -95,8 +95,8 @@ abstract class _$$ModeratedImageImplCopyWith<$Res>
   @useResult
   $Res call(
       {String bucketName,
-      List<Map<String, dynamic>> modarationLabels,
-      String modarationModelVersion,
+      List<Map<String, dynamic>> moderationLabels,
+      String moderationModelVersion,
       dynamic fileName});
 }
 
@@ -112,8 +112,8 @@ class __$$ModeratedImageImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? bucketName = null,
-    Object? modarationLabels = null,
-    Object? modarationModelVersion = null,
+    Object? moderationLabels = null,
+    Object? moderationModelVersion = null,
     Object? fileName = freezed,
   }) {
     return _then(_$ModeratedImageImpl(
@@ -121,13 +121,13 @@ class __$$ModeratedImageImplCopyWithImpl<$Res>
           ? _value.bucketName
           : bucketName // ignore: cast_nullable_to_non_nullable
               as String,
-      modarationLabels: null == modarationLabels
-          ? _value._modarationLabels
-          : modarationLabels // ignore: cast_nullable_to_non_nullable
+      moderationLabels: null == moderationLabels
+          ? _value._moderationLabels
+          : moderationLabels // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
-      modarationModelVersion: null == modarationModelVersion
-          ? _value.modarationModelVersion
-          : modarationModelVersion // ignore: cast_nullable_to_non_nullable
+      moderationModelVersion: null == moderationModelVersion
+          ? _value.moderationModelVersion
+          : moderationModelVersion // ignore: cast_nullable_to_non_nullable
               as String,
       fileName: freezed == fileName ? _value.fileName! : fileName,
     ));
@@ -139,10 +139,10 @@ class __$$ModeratedImageImplCopyWithImpl<$Res>
 class _$ModeratedImageImpl extends _ModeratedImage {
   const _$ModeratedImageImpl(
       {required this.bucketName,
-      final List<Map<String, dynamic>> modarationLabels = const [],
-      this.modarationModelVersion = '',
+      final List<Map<String, dynamic>> moderationLabels = const [],
+      this.moderationModelVersion = '',
       this.fileName = ""})
-      : _modarationLabels = modarationLabels,
+      : _moderationLabels = moderationLabels,
         super._();
 
   factory _$ModeratedImageImpl.fromJson(Map<String, dynamic> json) =>
@@ -150,20 +150,20 @@ class _$ModeratedImageImpl extends _ModeratedImage {
 
   @override
   final String bucketName;
-  final List<Map<String, dynamic>> _modarationLabels;
+  final List<Map<String, dynamic>> _moderationLabels;
   @override
   @JsonKey()
-  List<Map<String, dynamic>> get modarationLabels {
-    if (_modarationLabels is EqualUnmodifiableListView)
-      return _modarationLabels;
+  List<Map<String, dynamic>> get moderationLabels {
+    if (_moderationLabels is EqualUnmodifiableListView)
+      return _moderationLabels;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_modarationLabels);
+    return EqualUnmodifiableListView(_moderationLabels);
   }
 
 //不適切な理由を列挙
   @override
   @JsonKey()
-  final String modarationModelVersion;
+  final String moderationModelVersion;
 // 検証を行ったモデルの名前
   @override
   @JsonKey()
@@ -171,7 +171,7 @@ class _$ModeratedImageImpl extends _ModeratedImage {
 
   @override
   String toString() {
-    return 'ModeratedImage(bucketName: $bucketName, modarationLabels: $modarationLabels, modarationModelVersion: $modarationModelVersion, fileName: $fileName)';
+    return 'ModeratedImage(bucketName: $bucketName, moderationLabels: $moderationLabels, moderationModelVersion: $moderationModelVersion, fileName: $fileName)';
   }
 
   @override
@@ -182,9 +182,9 @@ class _$ModeratedImageImpl extends _ModeratedImage {
             (identical(other.bucketName, bucketName) ||
                 other.bucketName == bucketName) &&
             const DeepCollectionEquality()
-                .equals(other._modarationLabels, _modarationLabels) &&
-            (identical(other.modarationModelVersion, modarationModelVersion) ||
-                other.modarationModelVersion == modarationModelVersion) &&
+                .equals(other._moderationLabels, _moderationLabels) &&
+            (identical(other.moderationModelVersion, moderationModelVersion) ||
+                other.moderationModelVersion == moderationModelVersion) &&
             const DeepCollectionEquality().equals(other.fileName, fileName));
   }
 
@@ -193,8 +193,8 @@ class _$ModeratedImageImpl extends _ModeratedImage {
   int get hashCode => Object.hash(
       runtimeType,
       bucketName,
-      const DeepCollectionEquality().hash(_modarationLabels),
-      modarationModelVersion,
+      const DeepCollectionEquality().hash(_moderationLabels),
+      moderationModelVersion,
       const DeepCollectionEquality().hash(fileName));
 
   @JsonKey(ignore: true)
@@ -215,8 +215,8 @@ class _$ModeratedImageImpl extends _ModeratedImage {
 abstract class _ModeratedImage extends ModeratedImage {
   const factory _ModeratedImage(
       {required final String bucketName,
-      final List<Map<String, dynamic>> modarationLabels,
-      final String modarationModelVersion,
+      final List<Map<String, dynamic>> moderationLabels,
+      final String moderationModelVersion,
       final dynamic fileName}) = _$ModeratedImageImpl;
   const _ModeratedImage._() : super._();
 
@@ -226,9 +226,9 @@ abstract class _ModeratedImage extends ModeratedImage {
   @override
   String get bucketName;
   @override
-  List<Map<String, dynamic>> get modarationLabels;
+  List<Map<String, dynamic>> get moderationLabels;
   @override //不適切な理由を列挙
-  String get modarationModelVersion;
+  String get moderationModelVersion;
   @override // 検証を行ったモデルの名前
   dynamic get fileName;
   @override
