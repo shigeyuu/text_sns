@@ -15,6 +15,7 @@ import 'package:text_sns/repository/aws_s3_repository.dart';
 import 'package:text_sns/repository/firestore_repository.dart';
 import 'package:text_sns/ui_core/file_core.dart';
 import 'package:text_sns/ui_core/ui_helper.dart';
+import 'package:text_sns/ui_core/validator_core.dart';
 
 class EditController extends SimpleFormController {
   static EditController get to => Get.find<EditController>();
@@ -30,12 +31,12 @@ class EditController extends SimpleFormController {
   @override
   String get successMsg => EditConstant.successMsg;
   @override
-  String get validatorMsg => EditConstant.validatorMsg;
+  String? Function(String? p1)? get validator => ValidatorCore.text;
 
   @override
   void onPositiveButtonPressed() async {
     final uint8list = rxUint8list.value;
-    if (text.isEmpty && uint8list == null) return;
+    if (!ValidatorCore.isValidText(text) && uint8list == null) return;
     // 画像をアップロードする
     final repository = AWSS3Repository();
     final bucket = dotenv.get(EnvKey.AWS_S3_USER_IMAGES_BUCKET.name);
