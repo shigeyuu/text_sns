@@ -19,4 +19,5 @@ abstract class PublicUser implements _$PublicUser {
       _$PublicUserFromJson(json);
 
   ModeratedImage get typedImage => ModeratedImage.fromJson(image);
+  bool get isAppropriate => typedImage.moderationLabels.isEmpty;
 }
