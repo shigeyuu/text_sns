@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:text_sns/controllers/abstract/smple_form_controller.dart';
+import 'package:text_sns/controllers/abstract/simple_form_controller.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/repository/auth_repository.dart';
 import 'package:text_sns/ui_core/ui_helper.dart';
