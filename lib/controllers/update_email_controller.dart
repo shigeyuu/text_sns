@@ -27,6 +27,7 @@ class UpdateEmailController extends SimpleFormController {
     result.when(success: (_) {
       UIHelper.showFlutterToast(successMsg);
       Get.back();
+      Get.back();
     }, failure: () {
       UIHelper.showFlutterToast(failureMsg);
     });

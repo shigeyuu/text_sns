@@ -28,6 +28,12 @@ class AuthClient {
     await user.sendEmailVerification();
   }
 
+  Future<void> reauthenticateWithCredential(User user, String password) async {
+    final credential =
+        EmailAuthProvider.credential(email: user.email!, password: password);
+    await user.reauthenticateWithCredential(credential);
+  }
+
   Future<void> verifyBeforeUpdateEmail(User user, String newEmail) async {
     await user.verifyBeforeUpdateEmail(newEmail);
   }
