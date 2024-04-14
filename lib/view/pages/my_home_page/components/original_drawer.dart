@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/controllers/theme_controller.dart';
+import 'package:text_sns/view/pages/account_page.dart';
 import 'package:text_sns/view/pages/profile_page.dart';
 
 class OriginalDrawer extends StatelessWidget {
@@ -17,6 +18,12 @@ class OriginalDrawer extends StatelessWidget {
         child: DrawerHeader(
           child: Text('メニュー'),
         ),
+      ),
+      ListTile(
+        title: const Text("アカウントページへ"),
+        onTap: () {
+          Get.toNamed(AccountPage.path);
+        },
       ),
       ListTile(
         title: const Text("自分のプロフィールへ"),

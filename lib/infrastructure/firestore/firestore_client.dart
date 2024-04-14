@@ -6,5 +6,6 @@ class FirestoreClient {
       await ref.update(data);
 
   Future<void> deleteDoc(DocRef ref) async => await ref.delete();
-  Future getDoc(DocRef ref) async => await ref.get();
+  FutureDoc getDoc(DocRef ref) async => await ref.get();
+  FutureQSnapshot getDocs(MapQuery query) async => await query.get();
 }
