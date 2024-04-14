@@ -3,16 +3,17 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 
 class ByteImage extends StatelessWidget {
-  const ByteImage({super.key, required this.bytes});
+  const ByteImage({super.key, required this.bytes, this.length = 60.0});
   final Uint8List? bytes;
+  final double length;
   @override
   Widget build(BuildContext context) {
     return bytes == null
-        ? const Icon(Icons.person, size: 60.0)
+        ? Icon(Icons.person, size: length)
         : ClipOval(
             child: SizedBox(
-              width: 60.0,
-              height: 60.0,
+              width: length,
+              height: length,
               child: Align(
                 alignment: Alignment.center,
                 child: Image.memory(bytes!),
