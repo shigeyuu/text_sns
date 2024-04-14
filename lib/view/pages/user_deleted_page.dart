@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:text_sns/constant/account_constant.dart';
 import 'package:text_sns/view/common/basic_page.dart';
 
 class UserDeletedPage extends StatelessWidget {
@@ -11,7 +12,7 @@ class UserDeletedPage extends StatelessWidget {
         child: Align(
             alignment: Alignment.center,
             child: Text(
-              'ユーザーが削除されました',
+              AccountConstant.userDeletedPageTitle,
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             )));
   }

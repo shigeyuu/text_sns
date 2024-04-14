@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:text_sns/constant/account_constant.dart';
 import 'package:text_sns/controllers/abstract/simple_form_controller.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/enums/reauthenticate_purpose.dart';
@@ -8,7 +9,7 @@ import 'package:text_sns/ui_core/ui_helper.dart';
 import 'package:text_sns/ui_core/validator_core.dart';
 import 'package:text_sns/view/pages/reauthenticate_page.dart';
 import 'package:text_sns/view/pages/update_email_page.dart';
-import 'package:text_sns/view/upate_password_page.dart';
+import 'package:text_sns/view/update_password_page.dart';
 
 class ReauthenticateController extends SimpleFormController {
   @override
@@ -52,8 +53,8 @@ class ReauthenticateController extends SimpleFormController {
           Get.toNamed(UpdatePasswordPage.path);
           break;
         case ReauthenticatePurpose.deleteUser:
-          DialogCore.cupertinoAlertDialog("ユーザーを削除しますが、本当によろしいでしょうか?", "最終確認",
-              () {
+          DialogCore.cupertinoAlertDialog(AccountConstant.confirmDeleteUserMsg,
+              AccountConstant.confirmDeleteUserTitle, () {
             Get.back();
             AuthController.to.deleteUser();
           });

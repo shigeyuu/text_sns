@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:text_sns/constant/account_constant.dart';
 import 'package:text_sns/controllers/auth_controller.dart';
 import 'package:text_sns/view/common/basic_page.dart';
 
@@ -11,7 +12,7 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = AuthController.to;
     return BasicPage(
-      appBarTitle: 'アカウントページ',
+      appBarTitle: AccountConstant.accountPagetitle,
       child: Center(
         child: ListView(
           children: [
@@ -27,16 +28,16 @@ class AccountPage extends StatelessWidget {
               );
             }),
             ListTile(
-              title: const Text('パスワードを変更する'),
+              title: const Text(AccountConstant.accountPagetitle),
               onTap: controller.onUpatePasswordTileTapped,
             ),
             ListTile(
-              title: const Text('ログアウト'),
+              title: const Text(AccountConstant.logoutTitle),
               onTap: controller.onSignOutButtonPressed,
             ),
             ListTile(
-              title:
-                  const Text('アカウントを削除する', style: TextStyle(color: Colors.red)),
+              title: const Text(AccountConstant.deleteUserTitle,
+                  style: TextStyle(color: Colors.red)),
               onTap: controller.onDeleteUserTileTapped,
             ),
           ],
