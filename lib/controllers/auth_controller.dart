@@ -85,7 +85,14 @@ class AuthController extends GetxController {
   void _toggleIsLoginMode() => rxIsLoginMode.value = !rxIsLoginMode.value;
 
   void onEditButtonPressed() {
-    Get.toNamed(ReauthenticatePage.generatePath(
-        ReauthenticatePurpose.updateEmail.name));
+    final String purpose = ReauthenticatePurpose.updateEmail.name;
+    final String path = ReauthenticatePage.generatePath(purpose);
+    Get.toNamed(path);
+  }
+
+  void onUpatePasswordTileTapped() {
+    final String purpose = ReauthenticatePurpose.updatePassword.name;
+    final String path = ReauthenticatePage.generatePath(purpose);
+    Get.toNamed(path);
   }
 }
