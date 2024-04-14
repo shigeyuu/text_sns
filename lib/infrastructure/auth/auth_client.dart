@@ -41,4 +41,8 @@ class AuthClient {
   Future<void> updatePassword(User user, String newPassword) async {
     await user.updatePassword(newPassword);
   }
+
+  Future<void> delete(User user) async {
+    await user.delete();
+  }
 }

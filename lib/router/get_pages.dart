@@ -3,6 +3,7 @@ import 'package:text_sns/view/pages/account_page.dart';
 import 'package:text_sns/view/pages/logouted_page.dart';
 import 'package:text_sns/view/pages/reauthenticate_page.dart';
 import 'package:text_sns/view/pages/update_email_page.dart';
+import 'package:text_sns/view/pages/user_deleted_page.dart';
 import 'package:text_sns/view/upate_password_page.dart';
 
 class GetPages {
@@ -27,5 +28,9 @@ class GetPages {
       name: UpdatePasswordPage.path,
       page: () => const UpdatePasswordPage(),
     ),
+    GetPage(
+      name: UserDeletedPage.path,
+      page: () => const UserDeletedPage(),
+    )
   ];
 }
