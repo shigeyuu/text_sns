@@ -7,4 +7,6 @@ class DocRefCore {
 
   static DocRef userUpdateLogDocRef(String uid, String logId) =>
       ColRefCore.userUpdateLogsColRef(uid).doc(logId);
+  static DocRef postDocRef(String uid, String postId) =>
+      ColRefCore.postsColRef(uid).doc(postId);
 }
