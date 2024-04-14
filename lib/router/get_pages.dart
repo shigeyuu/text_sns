@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:text_sns/view/create_post_page.dart';
 import 'package:text_sns/view/pages/account_page.dart';
 import 'package:text_sns/view/pages/logouted_page.dart';
 import 'package:text_sns/view/pages/reauthenticate_page.dart';
@@ -31,6 +32,10 @@ class GetPages {
     GetPage(
       name: UserDeletedPage.path,
       page: () => const UserDeletedPage(),
-    )
+    ),
+    GetPage(
+      name: CreatePostPage.path,
+      page: () => const CreatePostPage(),
+    ),
   ];
 }
