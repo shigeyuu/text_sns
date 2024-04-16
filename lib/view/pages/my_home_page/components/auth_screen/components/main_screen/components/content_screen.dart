@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:text_sns/controllers/abstract/posts_controller.dart';
-import 'package:text_sns/models/post/post.dart';
+import 'package:text_sns/models/q_doc_info/q_doc_info.dart';
+import 'package:text_sns/view/common/post_card/post_card.dart';
 
 class ContentScreen extends StatelessWidget {
   const ContentScreen({super.key});
@@ -9,17 +10,12 @@ class ContentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(PostsController());
     return Obx(() {
-      final List<Post> posts = controller.qDocInfos
-          .map((element) => Post.fromJson(element.data()))
-          .toList();
+      final List<QDocInfo> qDocInfos = controller.qDocInfos;
       return ListView.builder(
-        itemCount: posts.length,
+        itemCount: qDocInfos.length,
         itemBuilder: (context, index) {
-          final Post post = posts[index];
-          return ListTile(
-            title: Text(post.content),
-            subtitle: Text("投稿者: ${post.uid}"),
-          );
+          final qDocInfo = qDocInfos[index];
+          return PostCard(qDocInfo: qDocInfo);
         },
       );
     });
