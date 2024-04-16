@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:get/get.dart';
+import 'package:text_sns/controllers/main_controller.dart';
 import 'package:text_sns/core/firestore/query_core.dart';
 import 'package:text_sns/models/modelated_image/moderated_image.dart';
 import 'package:text_sns/models/post/post.dart';
@@ -67,5 +68,17 @@ class PostsController extends GetxController {
       uint8list = null;
     });
     return uint8list;
+  }
+
+  Future<void> deletePost(QDoc postDoc) async {
+    final repository = FirestoreRepository();
+    final ref = postDoc.reference;
+    final result = await repository.deleteDoc(ref);
+    result.when(success: (_) {
+      MainController.to.deletePostIds.add(postDoc.id);
+      UIHelper.showFlutterToast("投稿を削除しました。");
+    }, failure: () {
+      UIHelper.showFlutterToast("投稿の削除に失敗しました。");
+    });
   }
 }
