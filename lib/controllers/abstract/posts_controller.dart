@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:get/get.dart';
+import 'package:text_sns/constant/post_constant.dart';
 import 'package:text_sns/controllers/main_controller.dart';
 import 'package:text_sns/core/firestore/query_core.dart';
 import 'package:text_sns/models/modelated_image/moderated_image.dart';
@@ -35,7 +36,7 @@ class PostsController extends GetxController {
         qDocInfos.add(qDocInfo);
       }
     }, failure: () {
-      UIHelper.showFlutterToast("投稿の取得に失敗しました。");
+      UIHelper.showFlutterToast(PostConstant.getPostFailureMsg);
     });
     super.onInit();
   }
@@ -76,9 +77,9 @@ class PostsController extends GetxController {
     final result = await repository.deleteDoc(ref);
     result.when(success: (_) {
       MainController.to.deletePostIds.add(postDoc.id);
-      UIHelper.showFlutterToast("投稿を削除しました。");
+      UIHelper.showFlutterToast(PostConstant.deletePostSuccessMsg);
     }, failure: () {
-      UIHelper.showFlutterToast("投稿の削除に失敗しました。");
+      UIHelper.showFlutterToast(PostConstant.deletePostFailureMsg);
     });
   }
 }
